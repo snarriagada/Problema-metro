@@ -1,0 +1,69 @@
+{
+  "train color": "green",
+  "start": "A",
+  "target": "F",
+  "stations": {
+    "A": {
+      "color": "None",
+      "neighbors": [
+        "B"
+      ]
+    },
+    "B": {
+      "color": "None",
+      "neighbors": [
+        "A",
+        "C"
+      ]
+    },
+    "C": {
+      "color": "None",
+      "neighbors": [
+        "B",
+        "D",
+        "G"
+      ]
+    },
+    "D": {
+      "color": "None",
+      "neighbors": [
+        "E",
+        "C"
+      ]
+    },
+    "E": {
+      "color": "None",
+      "neighbors": [
+        "D",
+        "F"
+      ]
+    },
+    "F": {
+      "color": "None",
+      "neighbors": [
+        "I"
+      ]
+    },
+    "G": {
+      "color": "green",
+      "neighbors": [
+        "H",
+        "C"
+      ]
+    },
+    "H": {
+      "color": "red",
+      "neighbors": [
+        "I",
+        "G"
+      ]
+    },
+    "I": {
+      "color": "green",
+      "neighbors": [
+        "H",
+        "F"
+      ]
+    }
+  }
+}
