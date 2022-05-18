@@ -1,4 +1,3 @@
-import sys
 import json
 from metro.const import *
 
@@ -20,11 +19,13 @@ def print_result(graph, previous_stations, shortest_path, start_station, target_
         raise Exception("Please confirm that the train can stop in the target station")
         
     while station != start_station:
-        if graph.train_color == None or station.color in [graph.train_color, None]: # hace parada en estacion sin color o del mismo que el tren
+        # Tren hace parada en estacion sin color o de su mismo color
+        if graph.train_color == None or station.color in [graph.train_color, None]: 
             path.append(str(station))
-        station = previous_stations[station]
- 
-    # Add the start station manually
+            try:
+                station = previous_stations[station]
+            except:
+                raise Exception("There is a unlinked station in the given network")
     path.append(str(start_station))
     
     print("We found the following best path with a value of {}.".format(shortest_path[target_station]))
@@ -37,7 +38,8 @@ def validate_input(input):
     start = input['start']
     target = input['target']
     stations = input['stations']
-    
+    stations_names = list(map(str, stations.keys()))
+
     if set(attributes) != set(input.keys()):
         raise Exception("Sorry, there are invalid attributes in input")
     if train_color not in ["None", GREEN, RED]:
@@ -51,5 +53,7 @@ def validate_input(input):
     if stations[start]['color'] != "None" and train_color != "None":
         if stations[start]['color'] != train_color:
             raise Exception("The train can`t start form the given 'start' station")
-        
-
+    if start not in stations_names:
+        raise Exception("Invalid start station")
+    if target not in stations_names:
+        raise Exception("Invalid target station")
