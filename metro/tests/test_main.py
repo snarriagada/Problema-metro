@@ -4,6 +4,7 @@ import sys
 from metro.station.station_class import *
 from metro.network.network_class import *
 from metro.helpers.file_helper import *
+from metro.const import *
 from metro.main import *
 
 
@@ -17,7 +18,7 @@ class TestNetwork(unittest.TestCase):
   link_stations(stations, input["stations"])
   network = create_network(stations, input["train color"])
   start_station = stations[input["start"]]
-  train_colors = [None, 'green', 'red']
+  train_colors = [None, GREEN, RED]
   
   def test_search_algorithm(self):
     '''

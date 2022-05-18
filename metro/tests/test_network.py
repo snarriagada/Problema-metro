@@ -4,6 +4,7 @@ import sys
 from metro.station.station_class import *
 from metro.network.network_class import *
 from metro.helpers.file_helper import *
+from metro.const import *
 
 # correr python3 -m unittest discover 
 
@@ -13,7 +14,7 @@ class TestNetwork(unittest.TestCase):
   
   stations = create_stations(input["stations"])
   network = create_network(stations, input["train color"])
-  train_colors = [None, 'green', 'red']
+  train_colors = [None, GREEN, RED]
   
   
   def test_create_network(self):
