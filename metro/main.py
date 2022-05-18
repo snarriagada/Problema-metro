@@ -52,10 +52,10 @@ def run():
     
     input = read_json_input(sys.argv[-1])
     validate_input(input)
+    
     stations = create_stations(input["stations"])
     link_stations(stations, input["stations"])
     network = create_network(stations, input["train color"])
-        
     start_station = stations[input["start"]]
     target_station = stations[input["target"]]
 

@@ -2,8 +2,6 @@ import unittest
 from metro.station.station_class import *
 from metro.helpers.file_helper import *
 
-# correr python3 -m unittest discover 
-
 input = read_json_input('metro/inputs/input_1.json')
 
 class TestStation(unittest.TestCase):
@@ -17,7 +15,7 @@ class TestStation(unittest.TestCase):
         '''
         message = "given object is not instance of Station."
         
-        for key, value in self.test_stations.items():
+        for value in self.test_stations.values():
           self.assertIsInstance(value, Station, message)
           
   def test_link_stations(self):

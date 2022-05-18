@@ -1,14 +1,9 @@
-import json
 import unittest
-import sys
 from metro.station.station_class import *
 from metro.network.network_class import *
 from metro.helpers.file_helper import *
 from metro.const import *
 from metro.main import *
-
-
-# correr python3 -m unittest discover 
 
 input = read_json_input('metro/inputs/input_1.json')
 
@@ -35,7 +30,7 @@ class TestNetwork(unittest.TestCase):
       self.assertIsInstance(value, Station, message_station_instace)
     for key, value in shortest_path.items():
       self.assertIsInstance(key, Station, message_station_instace)
-      self.assertTrue(0 <= value <= sys.maxsize, message_cost) # para comprobar que es int
+      self.assertTrue(0 <= value <= MAX_VALUE, message_cost) # para comprobar que es int
 
 if __name__ == '__main__':
   unittest.main()

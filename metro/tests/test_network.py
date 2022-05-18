@@ -1,6 +1,4 @@
-import json
 import unittest
-import sys
 from metro.station.station_class import *
 from metro.network.network_class import *
 from metro.helpers.file_helper import *
