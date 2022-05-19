@@ -94,12 +94,13 @@ Más facil con un ejemplo! A continuación se muestra una red y su formato en JS
 
 ### Ejecución :zap:
 
-El programa se ejecuta con el comando:
+El programa se ejecuta desde el terminal (situado a la misma altura que la carpeta "metro") con el comando:
 
   ```sh
   python3 -m metro <ruta_input>
    # e.g python3 -m metro metro/inputs/input_3.json
   ```
+ Se espera el retorno de la ruta mínima que recorre el tren desde la estacion de inicio a la final indicada en el archivo input. También,puede ocurrir que se arroje un error, con un respectivo mensaje alertando el problema existente en el archivo de input.
 
 ## Tests
 
