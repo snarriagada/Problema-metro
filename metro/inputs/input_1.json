@@ -64,11 +64,6 @@
         "H",
         "F"
       ]
-    },
-    "K": {
-      "color": "green",
-      "neighbors": [
-      ]
     }
   }
 }
