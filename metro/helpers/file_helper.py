@@ -22,13 +22,13 @@ def print_result(graph, previous_stations, shortest_path, start_station, target_
         # Tren hace parada en estacion sin color o de su mismo color
         if graph.train_color == None or station.color in [graph.train_color, None]: 
             path.append(str(station))
-            try:
-                station = previous_stations[station]
-            except:
-                raise Exception("There is a unlinked station in the given network")
+        try:
+            station = previous_stations[station]
+        except:
+            raise Exception("There is a unlinked station in the given network")
     path.append(str(start_station))
     
-    print("We found the following best path with a value of {}.".format(shortest_path[target_station]))
+    print("We found the following best path with {} stop(s).".format(shortest_path[target_station]))
     print(" -> ".join(reversed(path)))
 
 

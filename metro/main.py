@@ -34,7 +34,7 @@ def search_algorithm(graph, start_station):
             if current_min_station == None:
                 current_min_station = station
             elif shortest_path[station] < shortest_path[current_min_station]:
-                current_min_station = station      
+                current_min_station = station
         # Se actualiza el costo minimo de los vecinos y su estación previa.
         neighbors = current_min_station.neighbors
         for neighbor in neighbors:
