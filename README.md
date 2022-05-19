@@ -1,6 +1,6 @@
 # Problema-metro
 
-Hola!!
+Hola !! 🙌
 
 ### Sobre el proyecto
 Este programa corresponde a una implementación de una posible solución al problema "Metro" de Buda, donde se busca encontrar la ruta mínima entre
@@ -91,6 +91,7 @@ Más facil con un ejemplo! A continuación se muestra una red y su formato en JS
   }
 }
 ```
+También en la carpeta input_examples/ puedes encontrar un dibujo de las redes descritas en metro/inputs, las que puedes modifcar su "start" y "target" para realizar pruebas y comprobarlas en el dibujo.
 
 ### Ejecución :zap:
 
