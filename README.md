@@ -110,3 +110,10 @@ mediante:
   ```sh
   python3 -m unittest discover 
   ```
+ ## Referencias
+ 
+ EL diseño de la solución esta inspirada en el algoritmo Dijkstra, utilizado en grafos para encontrar la ruta mínima considerando arcos con costo. Esta idea fue adaptada al problema presentado, para lo cual recurrí a los siguientes ejemplos y fuentes de información para guiar el desarrollo:
+ 
+ - https://www.geeksforgeeks.org/python-program-for-dijkstras-shortest-path-algorithm-greedy-algo-7/
+ - https://www.udacity.com/blog/2021/10/implementing-dijkstras-algorithm-in-python.html
+ - https://stackabuse.com/dijkstras-algorithm-in-python/
