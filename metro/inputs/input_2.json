@@ -1,65 +1,72 @@
 {
-  "train color": "green",
+  "train color": "red",
   "start": "A",
-  "target": "F",
+  "target": "I",
   "stations": {
     "A": {
       "color": "None",
       "neighbors": [
-        "B"
+        "B",
+        "D"
       ]
     },
     "B": {
-      "color": "None",
+      "color": "green",
       "neighbors": [
         "A",
-        "C"
+        "C",
+        "E"
       ]
     },
     "C": {
-      "color": "None",
+      "color": "red",
       "neighbors": [
         "B",
-        "D",
-        "G"
+        "F"
       ]
     },
     "D": {
-      "color": "None",
+      "color": "red",
       "neighbors": [
+        "A",
         "E",
-        "C"
+        "G"
       ]
     },
     "E": {
       "color": "None",
       "neighbors": [
+        "B",
         "D",
-        "F"
+        "F",
+        "H"
       ]
     },
     "F": {
-      "color": "None",
-      "neighbors": [
-        "I"
-      ]
-    },
-    "G": {
-      "color": "green",
-      "neighbors": [
-        "H",
-        "C"
-      ]
-    },
-    "H": {
       "color": "red",
       "neighbors": [
         "I",
-        "G"
+        "C",
+        "E"
+      ]
+    },
+    "G": {
+      "color": "None",
+      "neighbors": [
+        "H",
+        "D"
+      ]
+    },
+    "H": {
+      "color": "green",
+      "neighbors": [
+        "I",
+        "G",
+        "E"
       ]
     },
     "I": {
-      "color": "green",
+      "color": "None",
       "neighbors": [
         "H",
         "F"
