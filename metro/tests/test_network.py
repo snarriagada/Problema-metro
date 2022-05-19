@@ -4,10 +4,7 @@ from metro.network.network_class import *
 from metro.helpers.file_helper import *
 from metro.const import *
 
-# correr python3 -m unittest discover 
-
 input = read_json_input('metro/inputs/input_1.json')
-
 class TestNetwork(unittest.TestCase):
   
   stations = create_stations(input["stations"])
